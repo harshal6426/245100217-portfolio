@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/download.png" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Coder</p>
+            <h1>Hi, I'm <span>Harshal Kore</span></h1>
+        </div>
+    </div>
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/hk.jpeg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am a passionate and disciplined programmer with strong proficiency in
+                     C, C++, and Java. I enjoy building efficient, logic-driven solutions and 
+                     have a solid understanding of core programming concepts such as data structures, 
+                     algorithms, object-oriented programming, and memory management. I’m particularly 
+                     interested in problem-solving and writing optimized, readable code that scales well. 
+                     I constantly work on improving my skills by exploring new challenges, debugging 
+                     complex issues, and learning better design approaches. With a growth mindset and 
+                     attention to detail, I aim to create reliable and high-performance software solutions.</p>
+
+                     <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                     </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>C programming</span><br>Pointers, memory management, arrays, structures, and file handling</li>
+                            <li><span>C++ programming</span><br>Object-oriented programming, STL (basic–intermediate), efficient problem-solving, optimized logic</li>
+                            <li><span>Java programming</span><br>OOP concepts, class design, inheritance, exception handling, and core Java fundamentals</li>
+                            <li><span>Data Structures & Algorithms</span><br>Arrays, strings, linked lists, stacks, queues, recursion, searching & sorting</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Coding Experience</span><br>Regularly participate in competitive programming contests, strengthening logic, speed, and accuracy</li>
+                            <li><span>Debugging Experience</span><br>Fixing compilation, runtime, and logical errors</li>
+                            <li><span>Data Structures Implementation Experience</span><br>Implementing arrays, stacks, queues, recursion</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>High School</span><br>Satara Sainik School, Satara</li>
+                            <li><span>Higher Secondary</span><br>Satara Sainik School, Satara</li>
+                            <li><span>Graduation Ongoing</span><br>Walchand College of Engineering, Sangli</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Portfolio</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="">
+                <div class="layer">
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+</div>
+<div id="contact" class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> harshalkore26@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 9890806426</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/harshalkore6426/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/harshal-kore-66911732b/"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required >
+                    <input type="email" name="Email" placeholder="Your Email" required >
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>© harshal. All Rights Reserved.</p>
+    </div>
+</div>
+
+
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname)
+    { 
+        for(tablink of tablinks)
+        {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents)
+        {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
